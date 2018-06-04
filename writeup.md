@@ -44,9 +44,15 @@ signs data set:
 
 #### 2. Include an exploratory visualization of the dataset.
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
+Here is an exploratory visualization of the data set. Data visualization was done as shown below in the notebook inline. The visualization gives the training sample size and classId for each of the traffic sign.
 
-![alt text][]
+classId -> 0, signname -> Speed limit (20km/h), training sample size -> 180
+
+![20 km/hr](./examples/20kmperhour.png "classId -> 0, signname -> Speed limit (20km/h), training sample size -> 180")
+
+classId -> 1, signname -> Speed limit (30km/h), training sample size -> 1980 
+
+![30 km/hr](./examples/30kmperhour.png "classId -> 1, signname -> Speed limit (30km/h), training sample size -> 1980")
 
 ### Design and Test a Model Architecture
 
