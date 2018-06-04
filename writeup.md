@@ -59,16 +59,18 @@ classId -> 1, signname -> Speed limit (30km/h), training sample size -> 1980
 #### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
 As a first step, I decided to use RGB images because ...
+
 I wanted to use existing LeNet-5 network to train the model. I will try with grayscale and SAME padding as improvements.
 
-As a last step, I normalized the image data because ...
+As a last step, I normalized the image data because so that the data has mean zero and equal variance. For image data, (pixel - 128)/ 128 is a quick way to approximately normalize the data and used in this project.
 
-I plan to generate additional data because ... 
+I plan to generate additional data which I have not done for this submission.
+
 
 I am not able to predict the traffic signs downloaded from web.
 
-To add more data to the the data set, I plan to use following techniques because ... 
 
+To add more data to the the data set.
 
 Yet to work on this
 
@@ -87,16 +89,18 @@ My final model consisted of the following layers:
 |:---------------------:|:---------------------------------------------:| 
 | Input         		| 32x32x3 RGB image   							| 
 | Convolution 5x5x3     	| 1x1 stride, valid padding, outputs 28x28x6 	|
-| RELU					|		activation										|
+| ELU					|		activation										|
 | Max pooling	      	| 2x2 stride,  outputs 14x14x6				|
 | Convolution 5x5	    | 1x1 stride, valid padding, outputs 10x10x16   									|
-| RELU					|		activation										|
+| ELU					|		activation										|
 | Max pooling	      	| 2x2 stride,  outputs 14x14x6				|
 | Flatten		| Input = 5x5x16. Output = 400.     									|
 | Fully Connected | Input = 400. Output = 120. |
-| RELU					|		activation										|
+| ELU					|		activation										|
+| Dropout					|		dropout probability 0.5										|
 | Fully Connected | Input = 120. Output = 84. |
-| RELU					|		activation										|
+| ELU					|		activation										|
+| Dropout					|		dropout probability 0.5										|
 | Fully Connected | Input = 84. Output = 43. |
 
  
@@ -110,14 +114,14 @@ Optimizer - AdamOptimizer
 
 Batch size - 128
 
-EPOCHS - 10
+EPOCHS - 12
 
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 My final model results were:
-* training set accuracy of 
-* validation set accuracy of 0.911
-* test set accuracy of 0.890
+* training set accuracy of 0.949
+* validation set accuracy of 0.949
+* test set accuracy of 0.940
 
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
