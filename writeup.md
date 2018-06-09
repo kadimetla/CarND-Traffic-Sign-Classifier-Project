@@ -130,15 +130,15 @@ Modified Lenet-5 architecture to train.
 
 * What were some problems with the initial architecture?
 
-Not able to predict all the traffic signs downloaded from web.
+Not able to predict all the traffic signs downloaded from web. 
 
 * How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
 
-Architecture was not adjusted due to time constraints. Plan to do it.
+Architecture was adjusted by adding dropout to fully connected layers and using elu activation.
 
 * Which parameters were tuned? How were they adjusted and why?
 
-None
+Adjusted EPOCHS to 12.
 
 * What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
 
@@ -154,7 +154,7 @@ Convolution neural network is the right architecture, needs data augmentation an
 
 * How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
 
-I see accuracy on test data 0.890
+I see accuracy on test data 0.94. 
  
 
 ### Test a Model on New Images
@@ -171,7 +171,7 @@ Here are five German traffic signs that I found on the web:
 
 The first image might be difficult to classify because ...
 
-Speed limit (30km/h) -  classifying correctly -   more data to train.
+Speed limit (30km/h) -  classifying wrong -   plan to look into it.
 
 Speed limit (60km/h) - classigying wrong - less data to train.
 
@@ -195,7 +195,7 @@ Here are the results of the prediction:
 | 	Speed limit (30km/h)		| Speed limit (30km/h)      							|
 
 
-The model was able to correctly guess 2 of the 5 traffic signs, which gives an accuracy of 40%. This compares not favorably to the accuracy on the test set of 89%
+The model was able to correctly guess 1 of the 5 traffic signs, which gives an accuracy of 20%. This compares not favorably to the accuracy on the test set of 94%
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
@@ -215,5 +215,7 @@ The top five soft max probabilities were
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
+
+Visualizing neural network would help to understand the classfication. I plan to do it.
 
 
